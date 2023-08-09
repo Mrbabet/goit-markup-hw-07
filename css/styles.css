@@ -34,15 +34,36 @@ p {
 }
 
 /* Typography */
-.header-xl {
-  font-family: "Roboto", sans-serif;
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1.07;
-  letter-spacing: 1.12px;
-  text-align: center;
+
+@media screen and (min-width: 1200px) {
+  .header-xl {
+    font-family: "Roboto", sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.07;
+    letter-spacing: 1.12px;
+    text-align: center;
+  }
+  .header-m {
+    font-family: "Roboto", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.72px;
+    color: var(--navyblue);
+    text-align: center;
+  }
+  .header-s {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+    color: var(--navyblue);
+  }
 }
-.header-m {
+
+.header-mobile {
   font-family: "Roboto", sans-serif;
   font-size: 36px;
   font-weight: 700;
@@ -51,14 +72,7 @@ p {
   color: var(--navyblue);
   text-align: center;
 }
-.header-s {
-  font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: 0.4px;
-  color: var(--navyblue);
-}
+
 .text-m {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -98,6 +112,8 @@ p {
 /* Main CSS */
 
 /* Global styles */
+
+/* Modal */
 
 .backdrop {
   width: 100%;
@@ -300,6 +316,8 @@ p {
   overflow: hidden;
 }
 
+/* Modal */
+
 body {
   font-family: "Roboto", sans-serif;
   color: var(--navyblue);
@@ -307,9 +325,16 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1158px;
-  padding: 0 15px;
+  padding: 0 16px;
   margin: 0 auto;
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 100%;
+    max-width: 1158px;
+    padding: 0 16px;
+    margin: 0 auto;
+  }
 }
 header {
   height: 72px;
@@ -322,14 +347,23 @@ header .container {
   display: flex;
   margin: 0 auto;
   align-items: center;
+  justify-content: space-between;
 }
+@media screen and (min-width: 1200px) {
+  header .container {
+    justify-content: inherit;
+  }
+  .menu-toggle {
+    display: none;
+  }
+}
+
 img {
   width: 100%;
   display: block;
 }
 svg {
   display: block;
-
   fill: currentColor;
 }
 
@@ -338,7 +372,12 @@ button {
 }
 
 nav {
-  margin-left: 76px;
+  display: flex;
+}
+@media screen and (min-width: 1200px) {
+  nav {
+    margin-left: 76px;
+  }
 }
 
 .logo {
@@ -356,11 +395,17 @@ nav {
 }
 
 .nav-links {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-  gap: 40px;
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .nav-links {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 40px;
+  }
 }
 
 .nav-links .link {
@@ -390,12 +435,18 @@ nav {
 }
 
 .contact {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-  gap: 40px;
-  margin-left: auto;
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin-left: auto;
+  }
 }
 .contact .link {
   text-decoration: none;
@@ -516,10 +567,16 @@ footer .text-m {
   letter-spacing: 0.32px;
   color: var(--white);
 }
-
 .section {
-  padding-block: 120px;
+  padding-block: 96px;
 }
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-block: 120px;
+  }
+}
+
 .icon-bg {
   display: flex;
   justify-content: center;
@@ -527,9 +584,11 @@ footer .text-m {
 }
 
 /* Home */
+
+/* Hero section */
 .hero {
-  padding: 188px 0px;
-  height: 600px;
+  padding: 112px 0px;
+  height: 432px;
   background: linear-gradient(var(--grey-mask), var(--grey-mask)),
     url("../images/people-office1.jpg");
   background-color: var(--grey);
@@ -539,13 +598,29 @@ footer .text-m {
   max-width: 1440px;
   margin: 0 auto;
 }
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding: 188px 0px;
+    height: 600px;
+  }
+}
+
 .hero .header-xl {
   color: var(--white, #fff);
   margin: 0;
-  width: 496px;
+  width: 320px;
   margin: 0 auto;
-  margin-bottom: 48px;
+  margin-bottom: 72px;
 }
+
+@media screen and (min-width: 1200px) {
+  .hero .header-xl {
+    width: 496px;
+    margin-bottom: 48px;
+  }
+}
+
 .hero .hero-button {
   color: var(--white);
   border: none;
@@ -561,25 +636,99 @@ footer .text-m {
 .hero .hero-button:focus {
   background-color: var(--ocean);
 }
+
+/* Hero section */
+
+/* Section 2 */
+.strong-sides-section .strong-sides {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.strong-sides-section .strong-sides .strong-side {
+  width: 100%;
+}
+.strong-side > .header-s {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.strong-side .icon-bg {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .strong-sides-section .strong-sides {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+  }
+  .strong-sides-section .strong-sides .strong-side {
+    width: 264px;
+  }
+  .strong-side > .header-s {
+    margin-bottom: 8px;
+  }
+  .strong-side .icon-bg {
+    display: flex;
+    margin-bottom: 8px;
+    background-color: var(--cloud);
+    border-radius: 4px;
+    height: 112px;
+  }
+}
+/* Section 3 */
+.our-job {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .our-job {
+    display: block;
+    padding-top: 0;
+  }
+  .our-job .header-m {
+    margin-bottom: 72px;
+  }
+
+  .our-job > .container > .our-job-container {
+    display: flex;
+    gap: 24px;
+  }
+}
+/* Section 3 */
+
+/* Section 4 */
+
 .team-presentation {
   background-color: var(--cloud);
 }
-.team-member .team-member-text h3 {
+.team-presentation .header-m {
+  margin-bottom: 72px;
+}
+.customers .header-m {
+  margin-bottom: 72px;
+}
+
+.team-member > .team-member-text > h3 {
   color: var(--navyblue);
 }
 .team-member .team-member-text p {
   color: var(--slate);
   margin-bottom: 8px;
 }
-.strong-sides-section {
-  width: 100%;
+.team-presentation .container .team-members {
+  display: flex;
+  gap: 24px;
 }
+
 .social-icons {
   display: flex;
   gap: 24px;
   justify-content: center;
 }
-.social-icon > .icon-bg > svg {
+
+.social-icon .icon-bg svg {
   fill: var(--cloud);
 }
 .social-icons .icon-bg {
@@ -594,44 +743,6 @@ footer .text-m {
   background-color: var(--ocean);
 }
 
-.strong-sides-section .strong-sides {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-}
-.strong-sides-section .strong-sides .strong-side {
-  width: 264px;
-}
-.strong-side > .header-s {
-  margin-bottom: 8px;
-}
-
-.strong-side .icon-bg {
-  margin-bottom: 8px;
-  background-color: var(--cloud);
-  border-radius: 4px;
-  height: 112px;
-}
-
-.our-job {
-  padding-top: 0;
-}
-.our-job .header-m {
-  margin-bottom: 72px;
-}
-
-.our-job > .container > .our-job-container {
-  display: flex;
-  gap: 24px;
-}
-
-.team-presentation .header-m {
-  margin-bottom: 72px;
-}
-.team-presentation .container .team-members {
-  display: flex;
-  gap: 24px;
-}
 .team-member {
   background-color: white;
   border-radius: 0px 0px 4px 4px;
@@ -640,13 +751,16 @@ footer .text-m {
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
-.team-member > .team-member-text {
+.team-member .team-member-text {
   padding: 32px 0;
   text-align: center;
 }
-.team-member-text > .header-s {
+.team-member-text .header-s {
   margin-bottom: 8px;
 }
+
+/* Section 4 */
+
 .customers .header-m {
   margin-bottom: 72px;
 }
