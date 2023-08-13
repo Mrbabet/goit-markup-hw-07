@@ -346,8 +346,8 @@ p {
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 32px;
-  background-color: #3f51b5;
+  padding: 40px;
+  background-color: var(--white);
   z-index: 999;
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
@@ -368,12 +368,41 @@ p {
   padding: 0;
   margin: 0;
   list-style: none;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.mobile-menu .header-mobile,
+.contact-mobile .header-mobile {
+  text-align: left;
+}
+
+.js-close-menu {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+}
+
+.js-close-menu svg {
+  color: black;
+}
+.contact-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 284px;
+}
+.menu-container .social-icons {
+  margin-top: 48px;
+  justify-content: flex-start;
+  gap: 56px;
 }
 
 .mobile-menu .link {
   display: block;
-  padding: 10px;
-  color: #fff;
+  color: var(--navyblue);
   text-decoration: none;
 }
 
