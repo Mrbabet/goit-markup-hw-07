@@ -381,6 +381,10 @@ p {
   text-align: left;
 }
 
+.mobile-menu .header-mobile .link.active {
+  color: var(--ocean);
+}
+
 .js-close-menu {
   border-radius: 50%;
   width: 40px;
@@ -396,6 +400,14 @@ p {
   flex-direction: column;
   gap: 40px;
   margin-top: auto;
+}
+.contact-mobile .link {
+  text-decoration: none;
+  color: var(--slate);
+}
+
+.contact-mobile li:nth-of-type(1) .link {
+  color: var(--iris);
 }
 .menu-container .social-icons {
   margin-top: 48px;
