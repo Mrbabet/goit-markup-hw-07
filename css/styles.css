@@ -208,13 +208,15 @@ p {
 
 .modal .input-container {
   position: relative;
-  width: 360px;
+  width: 100%;
+  max-width: 360px;
   height: 40px;
   color: var(--navyblue);
 }
 
 .modal input {
   color: var(--navyblue);
+  max-width: 360px;
   width: 100%;
   height: 40px;
   padding: 8px 40px;
@@ -241,7 +243,8 @@ p {
 
 .modal textarea {
   color: var(--navyblue);
-  width: 360px;
+  width: 100%;
+  max-width: 360px;
   height: 120px;
   padding: 8px 16px;
   border-radius: 4px;
