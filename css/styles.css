@@ -127,8 +127,10 @@ p {
 }
 .modal {
   position: absolute;
-  width: 408px;
-  height: 584px;
+  width: 100%;
+  max-width: 408px;
+  height: 100%;
+  max-height: 584px;
   border-radius: 4px;
   background: var(--dairy);
   top: 50%;
