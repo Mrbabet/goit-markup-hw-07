@@ -136,6 +136,16 @@ p {
   transform: translate(-50%, -50%);
   padding: 72px 24px 24px;
 }
+@media screen and (max-width: 420px) {
+  .modal {
+    width: 95%;
+    max-width: 392px;
+    height: 95%;
+    max-height: 584px;
+    overflow: scroll;
+  }
+}
+
 .modal .close-btn {
   display: flex;
   justify-content: center;
@@ -614,7 +624,7 @@ footer .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 120px;
+    gap: 72pxpx;
   }
 }
 
