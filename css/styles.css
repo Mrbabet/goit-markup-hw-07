@@ -451,6 +451,14 @@ body {
   padding: 0 16px;
   margin: 0 auto;
 }
+@media screen and (min-width: 768px) {
+  .container {
+    width: 100%;
+    max-width: 768px;
+    padding: 0 16px;
+    margin: 0 auto;
+  }
+}
 @media screen and (min-width: 1200px) {
   .container {
     width: 100%;
@@ -459,6 +467,7 @@ body {
     margin: 0 auto;
   }
 }
+
 header {
   height: 72px;
   background: var(--white, #fff);
@@ -1177,7 +1186,8 @@ footer .text-m {
 @media screen and (min-width: 768px) {
   .clients {
     flex-direction: row;
-    gap: 24px;
+    row-gap: 72px;
+    column-gap: 24px;
   }
 }
 
@@ -1223,17 +1233,21 @@ footer .text-m {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 24px;
   margin-bottom: 72px;
+
+  max-width: 320px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .filters {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 24px;
     margin-bottom: 72px;
+    width: auto;
+    max-width: NONE;
   }
 }
 .filters .filter-button {
@@ -1278,12 +1292,12 @@ footer .text-m {
     flex-wrap: wrap;
     row-gap: 48px;
     column-gap: 24px;
-    justify-content: center;
   }
   .project {
     width: 360px;
     position: relative;
     overflow: hidden;
+    flex-basis: calc((100% - 48px) / 2);
   }
 }
 
