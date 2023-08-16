@@ -194,6 +194,8 @@ p {
 .modal form {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 360px;
 }
 .modal label {
   display: flex;
