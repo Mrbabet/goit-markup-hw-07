@@ -1294,6 +1294,7 @@ footer .text-m {
     flex-wrap: wrap;
     row-gap: 48px;
     column-gap: 24px;
+    width: auto;
   }
   .project {
     width: 360px;
