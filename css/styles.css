@@ -448,6 +448,7 @@ body {
 
 .container {
   width: 100%;
+  max-width: 428px;
   padding: 0 16px;
   margin: 0 auto;
 }
@@ -1277,6 +1278,7 @@ footer .text-m {
   align-items: center;
   row-gap: 48px;
   column-gap: 24px;
+  width: 360px;
 }
 .project {
   width: 360px;
